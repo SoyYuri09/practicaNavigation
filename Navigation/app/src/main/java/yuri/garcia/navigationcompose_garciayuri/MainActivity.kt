@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import yuri.garcia.navigationcompose_garciayuri.navigation.AppNavigator
 import yuri.garcia.navigationcompose_garciayuri.ui.theme.NavigationCompose_GarciaYuriTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,12 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NavigationCompose_GarciaYuriTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                AppNavigator()
             }
         }
     }
